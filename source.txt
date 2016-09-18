@@ -1,0 +1,31 @@
+
+
+# Compile source file.
+if ("${CONFIG_CXX_FLAGS}" STREQUAL "")
+  set(CONFIG_CXX_FLAGS " ")
+endif("${CONFIG_CXX_FLAGS}" STREQUAL "")
+
+#STRING( FIND ${CONFIG_CXX_FLAGS} "_SPECIAL_DEFINE_" pound_pos )
+#if(${pound_pos} GREATER -1)
+#	message("Special Configure.")
+#endif(${pound_pos} GREATER -1)
+														
+#set(SRC_LIST	demo.cpp)
+								
+#set(HEADER_LIST	demo.h)
+
+if (WIN32)										
+  source_group("src" FILES ${SRC_LIST})
+endif(WIN32)
+
+	
+set(ALL_LIST ${SRC_LIST} ${HEADER_LIST})
+
+
+# Interface variable for your project.
+set(SOURCE_SRC_LIST ${SRC_LIST})
+set(SOURCE_HEADER_LIST ${HEADER_LIST})
+set(SOURCE_ALL_LIST ${ALL_LIST})
+
+
+
